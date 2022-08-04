@@ -5,7 +5,6 @@ class Solution:
 
         x = {k:v for k, v in num.items() if v != 1}
         y = list(x.values())
-        y
 
         count = 0
 
