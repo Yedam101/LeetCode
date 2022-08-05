@@ -1,14 +1,12 @@
-class Solution:
-    def findNumbers(self, nums: List[int]) -> int:
-        count = 0
-
-        for i in nums:
-            if 0 < i // 10 < 10:
-                count += 1
-            elif 0 < i // 1000 < 10:
-                count += 1
-            elif 0 < i // 100000 < 10:
-                count += 1 
-
-        return count
+class Solution(object):
+    def findNumbers(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # 리스트컴프리헨션으로 풀어보기
         
+        result = [str(i) for i in nums]
+        res = [i for i in result if len(i)%2 ==0]
+        
+        return len(res)
