@@ -6,7 +6,6 @@ class Solution:
         result = set()
         
         for i in range(len(nums)-2):
-            nums[i] == nums[0]
             j, k = i+1, len(nums)-1
             
             while j < k:
