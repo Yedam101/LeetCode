@@ -13,9 +13,9 @@ class Solution(object):
         curr = head
         
         while curr != None:
-            tmp = curr.next
+            next = curr.next
             curr.next = prev
             prev = curr
-            curr = tmp
+            curr = next
             
         return prev
