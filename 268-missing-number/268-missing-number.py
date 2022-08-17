@@ -4,7 +4,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        real = [i for i in range(len(nums)+1)]
-        a = list(set(real)-set(nums))
-        return a.pop()
+        return sum(range(len(nums)+1)) - sum(nums)
         
