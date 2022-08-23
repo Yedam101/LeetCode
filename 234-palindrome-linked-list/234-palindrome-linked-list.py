@@ -9,21 +9,18 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-
-        q = collections.deque()
+        q = deque()
         
         if not head:
             return True
         
-        ListNode = head
-        while ListNode:
-            q.append(ListNode.val)
-            ListNode = ListNode.next
+        while head is not None:
+            q.append(head.val)
+            head = head.next
             
         while len(q) > 1:
             if q.popleft() != q.pop():
                 return False
             
         return True
-            
         
