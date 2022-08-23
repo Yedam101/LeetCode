@@ -4,11 +4,11 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        a = [2**x for x in range(32)]
-
-
-        if n in a:
+        if n == 1:
             return True
-        else:
+
+        elif n%2 == 1 or n ==0:
             return False
+
+        return Solution().isPowerOfTwo(n/2)
         
