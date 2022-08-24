@@ -16,19 +16,11 @@ class Solution(object):
         """
         
         def dfs(node):
-            if not node: 
-                return False
-            if node == target: 
-                return True
-            
-            L, R = dfs(node.left), dfs(node.right)
-            
-            if L or R: self.path += [0] if L else [1]
-            return L or R
-        
-        self.path = []
-        dfs(original)
-        for i in self.path[::-1]:
-            cloned = cloned.left if i == 0 else cloned.right
-        
-        return cloned
+            if not node:
+                return None
+            elif node.val == target.val:
+                return node
+
+            return dfs(node.left) or dfs(node.right)
+
+        return dfs(cloned)
