@@ -9,19 +9,19 @@ class Node:
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
         
-        self.Answer = []
+        self.res = []
         self.dfs(root)
         
-        return self.Answer
+        return self.res
         
     
-    def dfs(self, Node):
-        if Node is None:
+    def dfs(self, root):
+        
+        if root:
+            self.res.append(root.val)
+            for i in root.children:
+                self.dfs(i)
+        else:
             return
-            
-        self.Answer.append(Node.val)
-        
-        for child in Node.children:
-            self.dfs(child)
-    
+
     
