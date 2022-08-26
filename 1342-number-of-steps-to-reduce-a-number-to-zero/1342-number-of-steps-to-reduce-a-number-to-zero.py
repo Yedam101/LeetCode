@@ -5,7 +5,7 @@ class Solution:
             if num % 2 == 0:
                 num = num/2
                 count += 1
-            if num % 2 == 1:
+            elif num % 2 == 1:
                 num -= 1
                 count += 1
                 
